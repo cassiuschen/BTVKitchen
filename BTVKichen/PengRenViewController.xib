@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PengRenViewController">
+            <connections>
+                <outlet property="textView" destination="rlt-ZA-GGY" id="szu-JQ-eXJ"/>
+                <outlet property="titles" destination="e4B-4Z-HWO" id="VgM-18-GAF"/>
+                <outlet property="videoView" destination="PiY-Pr-K5b" id="GIQ-H9-3HK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="996" height="658"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4B-4Z-HWO">
+                    <rect key="frame" x="418" y="12" width="161" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCd-3Q-NOx">
+                    <rect key="frame" x="24" y="407" width="62" height="86"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                    <state key="normal" title="◄">
+                        <color key="titleColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="preStep:" destination="-1" eventType="touchUpInside" id="cPS-zX-GHn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-ld-ZAH">
+                    <rect key="frame" x="24" y="18" width="75" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <state key="normal" title="返回">
+                        <color key="titleColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="SL4-9T-gT4"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rlt-ZA-GGY">
+                    <rect key="frame" x="48" y="60" width="900" height="122"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIE-Mz-hix">
+                    <rect key="frame" x="881" y="407" width="67" height="87"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                    <state key="normal" title="►">
+                        <color key="titleColor" red="0.93333333330000001" green="0.36078431370000003" blue="0.01176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextStep:" destination="-1" eventType="touchUpInside" id="9dG-eQ-cDs"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PiY-Pr-K5b">
+                    <rect key="frame" x="178" y="211" width="640" height="432"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="M5z-Ob-Zh4" appends="YES" id="KDZ-Xq-b1n"/>
+                <outletCollection property="gestureRecognizers" destination="8OK-eu-QV2" appends="YES" id="teS-2D-POq"/>
+            </connections>
+            <point key="canvasLocation" x="403" y="376"/>
+        </view>
+        <swipeGestureRecognizer direction="left" id="M5z-Ob-Zh4">
+            <connections>
+                <action selector="swipToLeft:" destination="-1" id="4Cg-gM-Qzx"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="right" id="8OK-eu-QV2">
+            <connections>
+                <action selector="swipToRIght:" destination="-1" id="Kh8-qw-d0p"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+</document>

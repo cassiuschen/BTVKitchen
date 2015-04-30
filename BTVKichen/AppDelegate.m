@@ -7,16 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
-
+NSString *urlParams;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [AVOSCloud setApplicationId:@"4q5lj4x9fb41lpzl76ara0t4twp4ebjdokeptw6evd9iuhfu"
+                      clientKey:@"xmieotk7xgofub983uedxr4osicyk1ag2jn5adm2f3593aua"];
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 
@@ -40,6 +44,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    // btvkitchen://
+    urlParams = url.absoluteString;
+    NSLog(@"GET VISIT FROM PAGE:%@, length: %lu  \n", [urlParams substringFromIndex:13], (unsigned long)[[urlParams substringFromIndex:13] length]);
+    if((unsigned long)[[urlParams substringFromIndex:13] length] > 0) {
+        //[ViewController* rootView];
+    }
+    return YES;
 }
 
 @end
